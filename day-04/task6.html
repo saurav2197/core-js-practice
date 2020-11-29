@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h4>
+      Enter the number<br />
+      <input type="text" id="a1" />
+    </h4>
+    <h4>What you want to calculate<br /></h4>
+    <select type="text" id="one">
+      <option value="*">Multiplicity</option>
+      <option value="+">Addition</option>
+    </select>
+    <button onclick="calc()">Calculate</button>
+    <h4>
+      Result is :<br />
+      <input type="text" id="ccc" />
+    </h4>
+  </body>
+  <script>
+    var c = 1,
+      m = 0;
+    function calc() {
+      var a1 = parseInt(document.getElementById("a1").value);
+      let ab = document.getElementById("one").value;
+      if (ab === "*") {
+        for (let i = a1; i >= 1; i--) {
+          c = c * i;
+        }
+        console.log(c);
+
+        document.getElementById("ccc").value = c;
+      } else {
+        for (let v = a1; v > 1; v--) {
+          m += v;
+        }
+        console.log(m);
+        document.getElementById("ccc").value = m;
+      }
+    }
+  </script>
+</html>

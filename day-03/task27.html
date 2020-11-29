@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Amnt per Day</title>
+  </head>
+  <body></body>
+
+  <script>
+    let max_age = 100,
+      age,
+      amntperday;
+    function calcsupply(age, amntperday) {
+      let ageleft = max_age - age;
+      let consumption = 365 * amntperday;
+      let totalconsumption = (consumption * ageleft).toFixed(2);
+      let total = (totalconsumption / 1000).toFixed(2);
+      console.log(
+        `Your consumption for next ${ageleft}years is ${totalconsumption}gms OR ${total}kg`
+      );
+      document.write(
+        `Your consumption for next ${ageleft}years is ${totalconsumption}gms OR ${total}kg`
+      );
+    }
+    age = prompt("Enter your age");
+    amntperday = prompt("Enter your per day consumption in grams");
+    calcsupply(age, amntperday);
+  </script>
+</html>
