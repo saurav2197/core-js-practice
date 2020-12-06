@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Arrayobj</title>
+  </head>
+  <body></body>
+  <script>
+    var arr = [
+      { name: "Rahul", author: "hero", read: false },
+      { name: "Rahul2", author: "hero2", read: false },
+      { name: "Rahul3", author: "hero3", read: true }
+    ];
+    for (let a = 0; a <= arr.length; a++) {
+      console.log(
+        arr[a].name + " " + "By" + " " + " " + arr[a].author + " " + arr[a].read
+      );
+
+      document.write("You read it.");
+      document.write(
+        arr[a].name +
+          " " +
+          "By" +
+          " " +
+          arr[a].author +
+          " " +
+          arr[a].read +
+          " <br/>"
+      );
+    }
+  </script>
+</html>
